@@ -1,0 +1,39 @@
+<div id="warehouse-register" class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="warehouse-register--title"> REGISTRO ALMACÉN </h3>
+    </div>
+  </div>
+
+  <form ng-submit="vm.create()" id="warehouse-register--form">
+
+    <div class="row">
+
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label class="warehouse-register--label" for="username"> NIT DEL ALMACÉN </label>
+          <input ng-model="vm.model.nit" type="text" class="warehouse-register--input">
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label class="warehouse-register--label" for="name"> NOMBRE DEL ALMACÉN </label>
+          <input ng-model="vm.model.name" type="text" class="warehouse-register--input">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-right">
+        <button ng-click="create()" class="buyer-register--btn-submit" type="submit">
+          REGISTRAR
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,53 @@
+<div id="buyer-list">
+
+  <div ng-if="mv.edit.values.name">
+    <h4 class="warehouse-list--title">
+      Editar
+    </h4>
+    <span ng-click="mv.edit = {}" class="pull-right">
+      <a class="cursor-pointer">
+        Cancelar edición
+        <span class="glyphicon glyphicon-remove"></span> &nbsp;
+      </a>
+    </span>
+    <app-buyer-register
+    data = "mv.edit"
+    ></app-buyer-register>
+  </div>
+
+  <div ng-if="! mv.edit.values.name">
+    <h4 class="warehouse-list--title">
+      LISTADO PERSONAS
+    </h4>
+
+    <div class="buyer-list--user row" ng-repeat="( key, buyer ) in mv.buyers">
+      <div class="col-xs-12">
+        <div class="row">
+          <span class="buyer-list--user-fullname">
+            {{ buyer.values.name + ' ' + buyer.values.last_name}}
+          </span>
+          <span class="buyer-list--user-info">
+            Nombre Usuario:
+            <b>
+              <em>{{ buyer.values.username }}</em>
+            </b>
+            E-mail:
+            <b>
+              <em>{{ buyer.values.email }}</em>
+            </b>
+          </span>
+          <span class="buyer-list--user-options">
+            <span ng-click="mv.setEdit( key )" class="cursor-pointer glyphicon glyphicon-edit" title="editar"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <button ng-click="mv.getData()" ng-disable="! mv.btnMore" class="btn btn-default">
+        Cargar Más
+      </button>
+    </div>
+  </div>
+
+</div>

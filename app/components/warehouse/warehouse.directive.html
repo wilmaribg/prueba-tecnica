@@ -1,0 +1,47 @@
+<div id="warehouse-list">
+
+  <div ng-if="mv.edit.values.name">
+    <h4 class="warehouse-list--title"> </h4>
+    <span ng-click="mv.edit = {}" class="pull-right">
+      <a class="cursor-pointer">
+        Cancelar edición
+        <span class="glyphicon glyphicon-remove"></span> &nbsp;
+      </a>
+    </span>
+    <app-warehouse-register
+    data = "mv.edit"
+    ></app-warehouse-register>
+  </div>
+
+  <div ng-if="! mv.edit.values.name">
+    <h4 class="warehouse-list--title">
+      LISTADO ALMACENES
+    </h4>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th class="col-xs-3">Nit</th>
+          <th>Almacén</th>
+          <th class="col-xs-1">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="( key, warehouse ) in mv.warehouses">
+          <td>{{ warehouse.values.nit }}</td>
+          <td>{{ warehouse.values.name }}</td>
+          <td class="text-center">
+            <span ng-click="mv.setEdit( key )" class="cursor-pointer glyphicon glyphicon-edit" title="editar" ></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row text-center">
+      <button ng-click="mv.getData()" ng-disable="! mv.btnMore" class="btn btn-default">
+        Cargar Más
+      </button>
+    </div>
+  </div>
+
+</div>

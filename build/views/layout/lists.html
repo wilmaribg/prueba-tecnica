@@ -1,0 +1,30 @@
+<div id="wbList">
+
+    <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+
+    <li role="presentation" ng-class="{'active': list.list === 'warehouse' }">
+      <a ng-click="list.setTab('warehouse')" role="tab" data-toggle="tab">
+        ALMACENES
+      </a>
+    </li>
+
+    <li role="presentation" ng-class="{'active': list.list === 'buyer' }">
+      <a  ng-click="list.setTab('buyer')" role="tab" data-toggle="tab">
+        PERSONAS
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active">
+      <app-buyer ng-if="list.list === 'buyer'"></app-buyer>
+      <app-warehouse ng-if="list.list === 'warehouse'"></app-warehouse>
+    </div>
+
+  </div>
+
+</div>

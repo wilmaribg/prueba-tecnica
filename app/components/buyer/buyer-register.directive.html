@@ -1,0 +1,107 @@
+<div id="buyer-register" class="container-fluid">
+
+  <div class="col-md-12">
+    <section>
+      <h3 class="buyer-register--title">
+        REGISTRO PERSONA
+      </h3>
+      <small class="text-muted"> Los campos marcados con (*) son obligatorios </small>
+      <br><br>
+    </section>
+  </div>
+
+  <form ng-submit="vm.create()"  id="buyer-register--form">
+
+    <div class="col-md-6">
+      <section>
+        <div class="form-group">
+          <label class="buyer-register--label" for="username"> NOMBRE USUARIO *</label>
+          <input ng-model="vm.model.username" type="text" class="buyer-register--input">
+        </div>
+        <div class="form-group">
+          <label class="buyer-register--label" for="name"> NOMBRE *</label>
+          <input ng-model="vm.model.name" type="text" class="buyer-register--input">
+        </div>
+        <div class="form-group">
+          <label class="buyer-register--label" for="last_name"> APELLIDO </label>
+          <input ng-model="vm.model.last_name" type="text" class="buyer-register--input">
+        </div>
+        <div class="form-group">
+          <label class="buyer-register--label" for="birth_date"> FECHA NACIMIENTO </label>
+          <input ng-model="vm.model.date" type="date" class="buyer-register--input">
+        </div>
+        <div class="form-group">
+          <label class="buyer-register--label" for="email"> E-MAIL *</label>
+          <input ng-model="vm.model.email" type="text" class="buyer-register--input">
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-6">
+      <aside>
+        <label class="buyer-register--label"> PREFERENCIAS </label>
+        <ul class="buyer-register--options">
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.prom_confama" type="checkbox"> Promociones Confama
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.prom_visa" type="checkbox"> Promociones VISA
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.prom_ame_express" type="checkbox"> Promociones American Express
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_santafe" type="checkbox"> Centro Comercial Santa Fé
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_oviedo" type="checkbox"> Centro Comercial Oviedo
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_tesoro" type="checkbox"> Centro Comercial El Tesoro
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_molinos" type="checkbox"> Centro Comercial Los Molinos
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_unicentro" type="checkbox"> Centro Comercial Unicentro
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              <input ng-model="vm.model.preferens.cc_sandiego" type="checkbox"> Centro Comercial San Diego
+            </label>
+          </li>
+          <li class="buyer-register--options-list">
+            <label class="buyer-register--label">
+              AUTORIZACION ENVIO DE NOTIFICACIONES <input ng-model="vm.model.suscribe" type="checkbox">
+            </label>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-right">
+        <button class="buyer-register--btn-submit" type="submit">
+          REGISTRAR
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>

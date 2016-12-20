@@ -1,0 +1,67 @@
+#menu {
+  padding-top: 15px;
+  background: #505050;
+
+  .menu-social {
+    padding-right: 36px;
+    padding-top: 10px;
+
+    .menu-social--link{
+      display: inline-block;
+    }
+  }
+
+  .menu-links {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 0;
+    background-color: #383838;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 0 4px 0;
+  }
+
+  .menu-link {
+    display: inline-block;
+    width: 19%;
+    list-style: none;
+    text-align: center;
+    font-size: 15px;
+    vertical-align: middle;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #F86C1B;
+    }
+
+    .menu-link--tel-image{
+      display: inline-block;
+      width: 32px;
+      height: 40px;
+      background-color: white;
+      background-image: url(../assets/phone.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .menu-link--tel-number{
+      display: inline-block;
+      height: 40px;
+      font-size: 21px;
+      vertical-align: top;
+      background-color: #F86C1B;
+      margin-left: -5px;
+      padding-top: 4px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 0 5px 5px 0;
+      color: white;
+    }
+  }
+}
